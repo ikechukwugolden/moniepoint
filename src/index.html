@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+<style>
+   .dropdown{
+            display: none;
+        }
+        .dropdown-container:hover .dropdown{
+            display: flex;
+        }
+       .buss:hover .grd {
+          background-color: blue;  
+          color: white;
+        }
+         .buss:hover h1{
+            color: blue;
+         }
+         .usd:hover .hash {
+          background-color: blue;  
+          color: white;
+        }
+         .usd:hover h1{
+            color: blue;
+         }
+          .dropdown2{
+            display: none;
+        }
+        .dropdown-container2:hover .dropdown2{
+            display: block;
+        }
+          .culture:hover .glass {
+          background-color: blue;  
+          color: white;
+        }
+         .culture:hover p{
+            color: blue;
+         }
+         .career:hover .suit {
+          background-color: blue;  
+          color: white;
+        }
+         .career:hover p{
+            color: blue;
+         }
+         .press:hover .fold{
+          background-color: blue;  
+          color: white;
+        }
+         .press:hover p{
+            color: blue;
+         }
+         
+
+           .carousel-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+    }
+    .carousel-item { flex: 0 0 auto;  padding: 0.5rem; }
+    .carousel-item img { border-radius: 0.75rem; }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+       
+     /* progress circle initial state */
+    .progress-circle {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+
+    .dot.active { background-color: #2563eb; } /* blue-600 */
+    .dot.inactive { background-color: #93c5fd; } /* blue-300 */
+</style>
+
+
+<body class="relative bg-[rgb(243,246,251)] w-full ">
+  <div class="top fixed z-30 bg-[rgb(3,11,29)] h-[9vh] w-[100%] flex  gap-2 justify-center items-center max-[500px]:hidden ">
+      <div class="text-white text-l  flex justify-center ml-12 w-[60%]">This website uses cookies to enhance your experience. Learn more here:</div>
+      <div class="flex gap-9 w-[30%]" >
+          <span class="hover:underline-offset-4 hover:underline text-l text-white"> Privacy Policy</span>
+          <span class="hover:underline-offset-4 hover:underline text-l text-white">Cookie Policy</span>
+      </div>
+     </div> 
+     <!-- business personal -->
+     <div style="display: flex!important; " class="busi-per  z-30 h-[9vh] w-full flex   max-[500px]:mt-0  max-[1024px]:fixed max-[1024px]:mt-[9vh] max-[1024px]:block max-[1024px]:z-30 min-[1024px]:hidden ">
+              <div class="w-[50%] h-full bg-[rgb(9,34,86)] flex  justify-center items-center">
+                  <span class="text-white">Business</span>
+              </div>
+             
+              
+              <div  class="  w-[50%] h-full bg-[rgb(3,19,53)] flex justify-center items-center">
+                  <span class="text-gray-400">Personal</span>
+              </div>
+      </div>
+
+      
+<header class="w-[100%] bg-[rgb(3,19,53)] z-30 fixed  h-[11vh] flex justify-between items-center max-[500px]:mt-[9vh] max-[1024px]:mt-[18vh] min-[1024px]:mt-[0vh] ">
+
+    <div class="logo ml-[3%] flex flex-wrap items-center  max-w-screen-xl mx-auto p-4">
+        <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="image/logo-mfb-white.png" class="h-8" alt="Monie point Logo" />
+            <button id="Business" class="self-center text-l bg-[rgb(53,66,93)] py-1 px-2 rounded-2xl font-semibold whitespace-nowrap dark:text-white max-[1024px]:hidden ">Business</button>
+            <button id="personal" class="hover:bg-[rgb(53,66,93)] ml-1.5 self-center text-l py-1 px-2 rounded-2xl dark:text-white  max-[1024px]:hidden ">personal</button>
+        </a>
+           </div>
+
+
+<div class="nav-buttons w-[60%] mr-[4%] h-full  flex gap-6 justify-end items-center  max-[1024px]:hidden ">
+    <div class="dropdown-container absolute mr-[43%] ">
+                 <a class="text-l text-white " href="">Products <i class="bi bi-chevron-down"></i></a>
+                  <div class="dropdown h-[55vh] w-[850px]  rounded-xl pt-5 bg-white flex justify-center gap-3 absolute  -ml-[300px] border   z-30 ">
+                 
+                  <div class="half1 w-[350px] h-fit flex flex-col gap-1">
+                    <div class="bank w-[350px]  h-fit py-1 rounded-2xl  flex flex-col gap-1 hover:bg-blue-300 " >
+                    <h1 class="text-3xl ml-2 text-blue-950">Banking</h1>
+                    <span class="text-gray-600 ml-2">Business and personal banking accounts</span>
+                </div>
+              
+                <div class="credit w-[350px]  h-fit py-1 rounded-2xl  flex flex-col gap-1 hover:bg-blue-300 " >
+                     <h1 class="text-3xl ml-2 text-blue-950">Credit</h1>
+                    <span class="text-gray-600 ml-2">Business and individual loans</span>
+                </div>
+                <div  class="pay w-[350px]  h-fit py-1 rounded-2xl  flex flex-col gap-1 hover:bg-blue-300 " >
+                     <h1 class="text-3xl ml-2 text-blue-950">Payments</h1>
+                    <span class="text-gray-600 ml-2">Accept Payments from anywhere</span>
+                </div>
+                <div class="mana w-[350px]  h-fit py-1 rounded-2xl  flex flex-col gap-1 hover:bg-blue-300 " >
+                     <h1 class="text-3xl ml-2 text-blue-950">Business Management</h1>
+                    <span class="text-gray-600 ml-2">Easy business money management & report</span>
+                </div>
+                  </div>
+                  <!-- <div class="half2  w-[390px]"> -->
+                     <div class="bank-hover  w-[390px]  h-fit  ">
+                   <div class="buss flex gap-3 w-[100%] ">
+                     <div class="grd bg-blue-300 h-8 w-8 flex justify-center items-center rounded-xl"> <i class="bi bi-grid-3x3-gap"></i></div>
+                    <span class="flex flex-col gap-1.5">
+                        <h1 class=" font-bold text-blue-950">Banking Account</h1>
+                        <p class="text-gray-600">Get a free bank account to power your business</p>
+                    </span>
+                   </div>
+                   <div class="usd flex gap-3">
+                     <div class="hash bg-blue-300 h-8 w-8 flex justify-center items-center rounded-xl">#</div>
+                    <span class="flex flex-col gap-1.5">
+                        <h1 class="font-bold text-blue-950">USSD</h1>
+                        <p class="text-gray-600">Dial *5573# for easy offline banking</p>
+                    </span>
+                   </div>
+                </div>
+              </div>
+            </div>
+                  
+                   <div class="dropdown-container2 absolute mr-[33%]">
+                <a class="text-l text-white  " href="">Company <i class="bi bi-chevron-down"></i></a>
+                <div class="dropdown2  h-[30vh] w-[240px]  rounded-xl  bg-white flex flex-col items-center justify-center absolute gap-3   -ml-[5%] z-30">
+                 <div class="culture py-2 flex gap-1.5 items-center mt-5 ml-5">
+                    <span class="glass h-8 w-8 rounded-xl bg-blue-300 flex justify-center items-center"><i class="bi bi-option"></i></span>
+                    <p class="text-blue-950 font-bold">Culture</p>
+                 </div>
+                 <div class="career py-2 flex gap-1.5 items-center ml-5">
+               <span class="suit h-8 w-8 rounded-xl bg-blue-300 flex justify-center items-center"><i class="bi bi-suitcase-lg"></i></span>
+               <p class="text-blue-950 font-bold">Careers</p>
+                 </div>
+                 <div class="press py-2 flex gap-1.5 items-center ml-5">
+                      <span class="fold h-8 w-8 rounded-xl bg-blue-300 flex justify-center items-center"><i class="bi bi-folder2-open"></i></span>
+                      <p class="text-blue-950 font-bold">Press</p>
+
+                 </div>  
+                </div>
+            </div>
+            <a class="py-1.5 px-2  absolute mr-[26%]  hover:bg-[rgb(53,66,93)] text-white text-l rounded-xl" href=""> About</a>
+            <a class="py-1.5 px-2  absolute mr-[20%] hover:bg-[rgb(53,66,93)] text-white text-l rounded-xl" href="">Contact </a>
+            <a class="py-1.5 px-2  absolute mr-[16%] hover:bg-[rgb(53,66,93)] text-white text-l rounded-xl" href=""> Blog </a>
+            <div class="flex gap-3.5 absolute ml-4 mr-3.5 ">
+                <button>
+                    <a class="bg-[rgb(196,233,253)] py-1.5 px-2 rounded-xl" href="">Sign In <i class="bi bi-arrow-right-short"></i></a>
+                </button>
+                <span class="flex gap-1.5 text-white">
+                   <img src="image/nig.svg" class="h-7 w-8" alt=""> 
+                   <i class="bi bi-chevron-down"></i>
+
+                </span>
+            </div>
+           </div>
+          
+                  
+
+                
+                 </div>
+                 </div>
+  
+        </div>
+            </div>
+          
+
+
+</div>           
+  
+<div class="list h-10 w-10 text-2xl text-white border border-gray-800 rounded-3xl flex justify-center items-center max-[1024px]:mr-[5%] max-[1024px]:block min-[1024px]:hidden">
+     <i class="bi bi-list h-5 w-5 ml-1.5 "></i>
+</div>
+
+
+</header>
+
+</body>
+</html>
