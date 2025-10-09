@@ -1369,6 +1369,176 @@
   
 
 
+  <!-- Cookie Banner -->
+<div class="fixed bottom-0 z-30 bg-[rgb(3,11,29)] h-[9vh] w-full flex flex-wrap justify-center items-center gap-2 px-6">
+  <p class="text-white text-sm md:text-base text-center">
+    This website uses cookies to enhance your experience. Learn more here:
+  </p>
+  <div class="flex gap-4 text-sm md:text-base">
+    <span class="text-white hover:underline cursor-pointer">Privacy Policy</span>
+    <span class="text-white hover:underline cursor-pointer">Cookie Policy</span>
+  </div>
+</div>
+
+<!-- Business/Personal Toggle (Mobile Only) -->
+<div class="busi-per z-30 w-full flex md:hidden fixed top-[9vh]">
+  <div class="w-1/2 h-[9vh] bg-[rgb(9,34,86)] flex justify-center items-center">
+    <span class="text-white">Business</span>
+  </div>
+  <div class="w-1/2 h-[9vh] bg-[rgb(3,19,53)] flex justify-center items-center">
+    <span class="text-gray-400">Personal</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w-full fixed top-0 bg-[rgb(3,19,53)] z-40 h-[11vh] flex justify-between items-center px-4 md:px-10">
+  <!-- Logo & Buttons -->
+  <div class="flex items-center gap-3">
+    <img src="image/monie.png" alt="Moniepoint Logo" class="h-8" />
+    <button class="bg-[rgb(53,66,93)] py-1 px-3 rounded-2xl font-semibold text-white hidden md:block">
+      Business
+    </button>
+    <button class="hover:bg-[rgb(53,66,93)] py-1 px-3 rounded-2xl text-white hidden md:block">
+      Personal
+    </button>
+  </div>
+
+  <!-- Desktop Nav -->
+  <nav class="hidden md:flex items-center gap-8 text-white">
+    <!-- Products -->
+    <div class="relative group">
+      <a href="#" class="flex items-center gap-1">Products <i class="bi bi-chevron-down"></i></a>
+      <div
+        class="hidden group-hover:flex absolute top-full mt-2 bg-white text-black rounded-xl shadow-lg w-[850px] left-[-300px] p-5 gap-5 z-40">
+        <div class="flex flex-col w-[350px] gap-2">
+          <div class="hover:bg-blue-100 rounded-xl p-2">
+            <h1 class="text-xl text-blue-950">Banking</h1>
+            <p class="text-gray-600 text-sm">Business and personal banking accounts</p>
+          </div>
+          <div class="hover:bg-blue-100 rounded-xl p-2">
+            <h1 class="text-xl text-blue-950">Credit</h1>
+            <p class="text-gray-600 text-sm">Business and individual loans</p>
+          </div>
+          <div class="hover:bg-blue-100 rounded-xl p-2">
+            <h1 class="text-xl text-blue-950">Payments</h1>
+            <p class="text-gray-600 text-sm">Accept payments from anywhere</p>
+          </div>
+          <div class="hover:bg-blue-100 rounded-xl p-2">
+            <h1 class="text-xl text-blue-950">Business Management</h1>
+            <p class="text-gray-600 text-sm">Easy money management & reporting</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-start gap-3">
+            <div class="bg-blue-200 h-8 w-8 flex justify-center items-center rounded-lg"><i
+                class="bi bi-grid-3x3-gap"></i></div>
+            <div>
+              <h1 class="font-bold text-blue-950">Banking Account</h1>
+              <p class="text-gray-600 text-sm">Get a free bank account for your business</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="bg-blue-200 h-8 w-8 flex justify-center items-center rounded-lg">#</div>
+            <div>
+              <h1 class="font-bold text-blue-950">USSD</h1>
+              <p class="text-gray-600 text-sm">Dial *5573# for easy offline banking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company -->
+    <div class="relative group">
+      <a href="#" class="flex items-center gap-1">Company <i class="bi bi-chevron-down"></i></a>
+      <div
+        class="hidden group-hover:flex flex-col absolute top-full mt-2 bg-white text-blue-950 rounded-xl shadow-lg w-[240px] p-4 gap-3 z-40">
+        <div class="flex items-center gap-2">
+          <div class="bg-blue-200 p-2 rounded-lg"><i class="bi bi-option"></i></div>
+          <p class="font-semibold">Culture</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="bg-blue-200 p-2 rounded-lg"><i class="bi bi-suitcase-lg"></i></div>
+          <p class="font-semibold">Careers</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="bg-blue-200 p-2 rounded-lg"><i class="bi bi-folder2-open"></i></div>
+          <p class="font-semibold">Press</p>
+        </div>
+      </div>
+    </div>
+
+    <a href="about.html" class="hover:bg-[rgb(53,66,93)] py-1 px-3 rounded-xl">About</a>
+    <a href="#" class="hover:bg-[rgb(53,66,93)] py-1 px-3 rounded-xl">Contact</a>
+    <a href="#" class="hover:bg-[rgb(53,66,93)] py-1 px-3 rounded-xl">Blog</a>
+
+    <button class="bg-[rgb(196,233,253)] text-black py-1 px-3 rounded-xl">Sign In <i
+        class="bi bi-arrow-right-short"></i></button>
+    <span class="flex items-center gap-1"><img src="image/nig (1).svg" class="h-6" alt=""><i
+        class="bi bi-chevron-down"></i></span>
+  </nav>
+
+  <!-- Mobile Menu Button -->
+  <div id="menu-btn"
+    class="md:hidden h-10 w-10 flex justify-center items-center border border-gray-700 rounded-3xl text-white text-2xl cursor-pointer">
+    <i class="bi bi-list"></i>
+  </div>
+</header>
+
+<!-- Mobile Full-Screen Menu -->
+<div id="mobileMenu"
+  class="fixed inset-0 bg-[rgb(3,19,53)] z-30 hidden flex-col items-start pt-[12vh] px-6 text-white overflow-y-auto">
+  <button id="closeMenu" class="absolute top-4 right-5 text-3xl"><i class="bi bi-x-lg"></i></button>
+
+  <div class="flex flex-col gap-5 text-lg w-full">
+    <!-- Products -->
+    <div>
+      <button class="flex justify-between items-center w-full" onclick="toggleSubmenu('mobileProducts')">
+        Products <i class="bi bi-chevron-down"></i>
+      </button>
+      <div id="mobileProducts" class="hidden flex-col gap-2 mt-2 pl-3 text-sm">
+        <a href="#">Banking</a>
+        <a href="#">Credit</a>
+        <a href="#">Payments</a>
+        <a href="#">Business Management</a>
+      </div>
+    </div>
+
+    <!-- Company -->
+    <div>
+      <button class="flex justify-between items-center w-full" onclick="toggleSubmenu('mobileCompany')">
+        Company <i class="bi bi-chevron-down"></i>
+      </button>
+      <div id="mobileCompany" class="hidden flex-col gap-2 mt-2 pl-3 text-sm">
+        <a href="#">Culture</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+      </div>
+    </div>
+
+    <a href="about.html">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Blog</a>
+
+    <button class="bg-[rgb(196,233,253)] text-black py-2 px-3 rounded-xl mt-3 w-fit">Sign In</button>
+  </div>
+</div>
+
+<!-- JS -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeMenu = document.getElementById('closeMenu');
+
+  menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+  closeMenu.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+
+  function toggleSubmenu(id) {
+    const submenu = document.getElementById(id);
+    submenu.classList.toggle('hidden');
+  }
+</script>
+
 
 
 

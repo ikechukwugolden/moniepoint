@@ -8,77 +8,25 @@
 
 </head>
 <style>
-  .dropdown{
-            display: none;
-        }
-        .dropdown-container:hover .dropdown{
-            display: flex;
-        }
-       .buss:hover .grd {
-          background-color: blue;  
-          color: white;
-        }
-         .buss:hover h1{
-            color: blue;
-         }
-         .usd:hover .hash {
-          background-color: blue;  
-          color: white;
-        }
-         .usd:hover h1{
-            color: blue;
-         }
-          .dropdown2{
-            display: none;
-        }
-        .dropdown-container2:hover .dropdown2{
-            display: block;
-        }
-          .culture:hover .glass {
-          background-color: blue;  
-          color: white;
-        }
-         .culture:hover p{
-            color: blue;
-         }
-         .career:hover .suit {
-          background-color: blue;  
-          color: white;
-        }
-         .career:hover p{
-            color: blue;
-         }
-         .press:hover .fold{
-          background-color: blue;  
-          color: white;
-        }
-         .press:hover p{
-            color: blue;
-         }
-
-
-         
-           .carousel-track {
+ .carousel-track {
       display: flex;
       width: max-content;
       animation: scroll 30s linear infinite;
     }
-    .carousel-item { flex: 0 0 auto;  padding: 0.5rem; }
-    .carousel-item img { border-radius: 0.75rem; }
-
-    @keyframes scroll {
+ .carousel-item { flex: 0 0 auto;  padding: 0.5rem; }
+ .carousel-item img { border-radius: 0.75rem; }
+  @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
        
      /* progress circle initial state */
-    .progress-circle {
+ .progress-circle {
       stroke-dasharray: 100;
       stroke-dashoffset: 100;
     }
-
-    .dot.active { background-color: #2563eb; } /* blue-600 */
-    .dot.inactive { background-color: #93c5fd; } /* blue-300 */
+ .dot.active { background-color: #2563eb; } /* blue-600 */
+ .dot.inactive { background-color: #93c5fd; } /* blue-300 */
 
 </style>
 
@@ -102,99 +50,176 @@
               </div>
       </div>
 
-      
-    <header class="w-[100%] bg-[rgb(3,19,53)] z-30 fixed  h-[11vh] flex justify-between items-center max-[500px]:mt-[9vh] max-[1024px]:mt-[18vh] min-[1024px]:mt-[0vh] ">
-
-      <div class="logo ml-[3%] flex flex-wrap items-center  max-w-screen-xl mx-auto p-4">
-          <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="image/monie.png" class="h-8" alt="Monie point Logo" />
-              <button id="Business" class="self-center text-l bg-[rgb(53,66,93)] py-1 px-2 rounded-2xl font-semibold whitespace-nowrap dark:text-white max-[1024px]:hidden ">Business</button>
-              <button id="personal" class="hover:bg-[rgb(53,66,93)] ml-1.5 self-center text-l py-1 px-2 rounded-2xl dark:text-white  max-[1024px]:hidden ">personal</button>
-          </a>
-      </div>
-       <!-- products -->
-
-      <div class="nav-buttons w-[60%] mr-[4%] h-full  flex gap-6 justify-end items-center  max-[1024px]:hidden ">    
-        <div class="dropdown-container absolute mr-[43%] gap-7 ">
-          <a class="text-l text-white " href="">Products <i class="bi bi-chevron-down"></i></a>
-           <div class="dropdown h-[55vh] w-[850px]  rounded-xl pt-5 bg-white flex justify-center gap-3 absolute  -ml-[300px] border   z-30 ">
-                 <!-- dropdown -->
-           <div class="half1 w-[350px] h-fit flex flex-col gap-1">
-              <div class="bank w-[350px]  h-fit py-1 rounded-2xl  flex flex-col gap-1 hover:bg-blue-300 " >
-                <h1 class="text-3xl ml-2 text-blue-950">Banking</h1>
-                <span class="text-gray-600 ml-2">Business and personal banking accounts</span>
+  <!-- Cookie Banner -->
+  <div class="fixed bottom-0 z-30 bg-[rgb(3,11,29)] h-[9vh] w-full flex flex-wrap justify-center items-center gap-2 px-6  max-[500px]:mt-0  max-[1024px]:fixed max-[1024px]:mt-[9vh] max-[1024px]:block max-[1024px]:z-30 min-[1024px]:hidden">
+    <p class="text-white text-sm md:text-base text-center">
+      This website uses cookies to enhance your experience. Learn more here:
+    </p>
+    <div class="flex gap-4 text-sm md:text-base">
+      <span class="text-white hover:underline cursor-pointer">Privacy Policy</span>
+      <span class="text-white hover:underline cursor-pointer">Cookie Policy</span>
+    </div>
+  </div>
+  
+  <!-- Business/Personal Toggle (Mobile Only) -->
+  <div class="busi-per z-30 w-full flex md:hidden fixed top-[9vh]">
+    <div class="w-1/2 h-[9vh] bg-[rgb(9,34,86)] flex justify-center items-center">
+      <span class="text-white">Business</span>
+    </div>
+    <div class="w-1/2 h-[9vh] bg-[rgb(3,19,53)] flex justify-center items-center">
+      <span class="text-gray-400">Personal</span>
+    </div>
+  </div>
+  
+  <!-- Header -->
+  <header class="w-full fixed top-0 bg-[rgb(3,19,53)] z-40 h-[11vh] flex justify-between items-center px-4 md:px-10">
+    <!-- Logo & Buttons -->
+    <div class="flex items-center gap-3">
+      <img src="image/monie.png" alt="Moniepoint Logo" class="h-8" />
+      <button class="bg-[rgb(53,66,93)] py-1 px-3 rounded-2xl font-semibold text-white hidden md:block">
+        Business
+      </button>
+      <button class="hover:bg-[rgb(53,66,93)] py-1 px-3 rounded-2xl text-white hidden md:block">
+        Personal
+      </button>
+    </div>
+  
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-8 text-white">
+      <!-- Products -->
+      <div class="relative group">
+        <a href="#" class="flex items-center gap-1">Products <i class="bi bi-chevron-down"></i></a>
+        <div
+          class="hidden group-hover:flex absolute top-full mt-2 bg-white text-black rounded-xl shadow-lg w-[850px] left-[-300px] p-5 gap-5 z-40">
+          <div class="flex flex-col w-[350px] gap-2">
+            <div class="hover:bg-blue-100 rounded-xl p-2">
+              <h1 class="text-xl text-blue-950">Banking</h1>
+              <p class="text-gray-600 text-sm">Business and personal banking accounts</p>
+            </div>
+            <div class="hover:bg-blue-100 rounded-xl p-2">
+              <h1 class="text-xl text-blue-950">Credit</h1>
+              <p class="text-gray-600 text-sm">Business and individual loans</p>
+            </div>
+            <div class="hover:bg-blue-100 rounded-xl p-2">
+              <h1 class="text-xl text-blue-950">Payments</h1>
+              <p class="text-gray-600 text-sm">Accept payments from anywhere</p>
+            </div>
+            <div class="hover:bg-blue-100 rounded-xl p-2">
+              <h1 class="text-xl text-blue-950">Business Management</h1>
+              <p class="text-gray-600 text-sm">Easy money management & reporting</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-start gap-3">
+              <div class="bg-blue-200 h-8 w-8 flex justify-center items-center rounded-lg"><i
+                  class="bi bi-grid-3x3-gap"></i></div>
+              <div>
+                <h1 class="font-bold text-blue-950">Banking Account</h1>
+                <p class="text-gray-600 text-sm">Get a free bank account for your business</p>
               </div>
-                   
-              <div class="credit w-[350px]  h-fit py-1 rounded-2xl  flex flex-col gap-1 hover:bg-blue-300 " >
-                   <h1 class="text-3xl ml-2 text-blue-950">Credit</h1>
-                  <span class="text-gray-600 ml-2">Business and individual loans</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="bg-blue-200 h-8 w-8 flex justify-center items-center rounded-lg">#</div>
+              <div>
+                <h1 class="font-bold text-blue-950">USSD</h1>
+                <p class="text-gray-600 text-sm">Dial *5573# for easy offline banking</p>
               </div>
-              <div  class="pay w-[350px]  h-fit py-1 rounded-2xl  flex flex-col gap-1 hover:bg-blue-300 " >
-                   <h1 class="text-3xl ml-2 text-blue-950">Payments</h1>
-                  <span class="text-gray-600 ml-2">Accept Payments from anywhere</span>
-              </div>
-              <div class="mana w-[350px]  h-fit py-1 rounded-2xl  flex flex-col gap-1 hover:bg-blue-300 " >
-                   <h1 class="text-3xl ml-2 text-blue-950">Business Management</h1>
-                  <span class="text-gray-600 ml-2">Easy business money management & report</span>
-              </div>
-             </div>
-             <!-- <div class="half2  w-[390px]"> -->
-             <div class="bank-hover  w-[390px]  h-fit gap-7  ">
-                 <div class="buss flex gap-3 w-[100%] ">
-                   <div class="grd bg-blue-300 h-8 w-8 flex justify-center items-center rounded-xl"> <i class="bi bi-grid-3x3-gap"></i></div>
-                   <span class="flex flex-col gap-1.5">
-                       <h1 class=" font-bold text-blue-950">Banking Account</h1>
-                       <p class="text-gray-600">Get a free bank account to power your business</p>
-                   </span>
-                 </div>
-                 <div class="usd flex gap-3">
-                   <div class="hash bg-blue-300 h-8 w-8 flex justify-center items-center rounded-xl">#</div>
-                  <span class="flex flex-col gap-1.5">
-                      <h1 class="font-bold text-blue-950">USSD</h1>
-                      <p class="text-gray-600">Dial *5573# for easy offline banking</p>
-                  </span>
-                 </div>
-              </div>
-               </div>
+            </div>
+          </div>
         </div>
-                  <!-- company dropdown -->
-       <div class="dropdown-container2 absolute mr-[33%]">
-         <a class="text-l text-white  " href="">Company <i class="bi bi-chevron-down"></i></a>
-         <div class="dropdown2  h-[30vh] w-[240px]  rounded-xl  bg-white flex flex-col items-center justify-center absolute gap-3   -ml-[5%] z-30">
-             <div class="culture py-2 flex gap-1.5 items-center mt-5 ml-5">
-                <span class="glass h-8 w-8 rounded-xl bg-blue-300 flex justify-center items-center"><i class="bi bi-option"></i></span>
-                <p class="text-blue-950 font-bold">Culture</p>
-             </div>
-             <div class="career py-2 flex gap-1.5 items-center ml-5">
-               <span class="suit h-8 w-8 rounded-xl bg-blue-300 flex justify-center items-center"><i class="bi bi-suitcase-lg"></i></span>
-               <p class="text-blue-950 font-bold">Careers</p>
-             </div>
-             <div class="press py-2 flex gap-1.5 items-center ml-5">
-                 <span class="fold h-8 w-8 rounded-xl bg-blue-300 flex justify-center items-center"><i class="bi bi-folder2-open"></i></span>
-                 <p class="text-blue-950 font-bold">Press</p >
-             </div>  
-         </div>
-        </div>
-            <a class="py-1.5 px-2  absolute mr-[26%]  hover:bg-[rgb(53,66,93)] text-white text-l rounded-xl" href=""> About</a>
-            <a class="py-1.5 px-2  absolute mr-[20%] hover:bg-[rgb(53,66,93)] text-white text-l rounded-xl" href="">Contact </a>
-            <a class="py-1.5 px-2  absolute mr-[16%] hover:bg-[rgb(53,66,93)] text-white text-l rounded-xl" href=""> Blog </a>
-             <div class="flex gap-3.5 absolute ml-4 mr-3.5 ">
-                <button>
-                    <a class="bg-[rgb(196,233,253)] py-1.5 px-2 rounded-xl" href="">Sign In <i class="bi bi-arrow-right-short"></i></a>
-                </button>
-                <span class="flex gap-1.5 text-white">
-                   <img src="image/nig (1).svg" class="h-7 w-8" alt=""> 
-                   <i class="bi bi-chevron-down"></i>
-
-                </span>
-             </div>
       </div>
-          
-      <div class="list h-10 w-10 text-2xl text-white border border-gray-800 rounded-3xl flex justify-center items-center max-[1024px]:mr-[5%] max-[1024px]:block min-[1024px]:hidden">
-           <i class="bi bi-list h-5 w-5 ml-1.5 "></i>
-      </div> 
-
-    </header>
+  
+      <!-- Company -->
+      <div class="relative group">
+        <a href="#" class="flex items-center gap-1">Company <i class="bi bi-chevron-down"></i></a>
+        <div
+          class="hidden group-hover:flex flex-col absolute top-full mt-2 bg-white text-blue-950 rounded-xl shadow-lg w-[240px] p-4 gap-3 z-40">
+          <div class="flex items-center gap-2">
+            <div class="bg-blue-200 p-2 rounded-lg"><i class="bi bi-option"></i></div>
+            <p class="font-semibold">Culture</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="bg-blue-200 p-2 rounded-lg"><i class="bi bi-suitcase-lg"></i></div>
+            <p class="font-semibold">Careers</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="bg-blue-200 p-2 rounded-lg"><i class="bi bi-folder2-open"></i></div>
+            <p class="font-semibold">Press</p>
+          </div>
+        </div>
+      </div>
+  
+      <a href="about.html" class="hover:bg-[rgb(53,66,93)] py-1 px-3 rounded-xl">About</a>
+      <a href="#" class="hover:bg-[rgb(53,66,93)] py-1 px-3 rounded-xl">Contact</a>
+      <a href="#" class="hover:bg-[rgb(53,66,93)] py-1 px-3 rounded-xl">Blog</a>
+  
+      <button class="bg-[rgb(196,233,253)] text-black py-1 px-3 rounded-xl">Sign In <i
+          class="bi bi-arrow-right-short"></i></button>
+      <span class="flex items-center gap-1"><img src="image/nig (1).svg" class="h-6" alt=""><i
+          class="bi bi-chevron-down"></i></span>
+    </nav>
+  
+    <!-- Mobile Menu Button -->
+    <div id="menu-btn"
+      class="md:hidden h-10 w-10 flex justify-center items-center border border-gray-700 rounded-3xl text-white text-2xl cursor-pointer">
+      <i class="bi bi-list"></i>
+    </div>
+  </header>
+  
+  <!-- Mobile Full-Screen Menu -->
+  <div id="mobileMenu"
+    class="fixed inset-0 bg-[rgb(3,19,53)] z-30 hidden flex-col items-start pt-[12vh] px-6 text-white overflow-y-auto">
+    <button id="closeMenu" class="absolute top-4 right-5 text-3xl"><i class="bi bi-x-lg"></i></button>
+  
+    <div class="flex flex-col gap-5 text-lg w-full">
+      <!-- Products -->
+      <div>
+        <button class="flex justify-between items-center w-full" onclick="toggleSubmenu('mobileProducts')">
+          Products <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="mobileProducts" class="hidden flex-col gap-2 mt-2 pl-3 text-sm">
+          <a href="#">Banking</a>
+          <a href="#">Credit</a>
+          <a href="#">Payments</a>
+          <a href="#">Business Management</a>
+        </div>
+      </div>
+  
+      <!-- Company -->
+      <div>
+        <button class="flex justify-between items-center w-full" onclick="toggleSubmenu('mobileCompany')">
+          Company <i class="bi bi-chevron-down"></i>
+        </button>
+        <div id="mobileCompany" class="hidden flex-col gap-2 mt-2 pl-3 text-sm">
+          <a href="#">Culture</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+      </div>
+  
+      <a href="about.html">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Blog</a>
+  
+      <button class="bg-[rgb(196,233,253)] text-black py-2 px-3 rounded-xl mt-3 w-fit">Sign In</button>
+    </div>
+  </div>
+  
+  <!-- JS -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+  
+    menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+    closeMenu.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+  
+    function toggleSubmenu(id) {
+      const submenu = document.getElementById(id);
+      submenu.classList.toggle('hidden');
+    }
+  </script>
+  
 
    <section class="hero flex flex-col lg:flex-row items-center justify-center bg-[rgb(3,19,53)] w-full pt-10 pb-20 lg:py-24 rounded-b-4xl overflow-hidden">
   
@@ -844,39 +869,7 @@
           </div>
         </div>
   
-    <!--  JavaScript -->
-    <!-- <script>
-      const steps = document.getElementById("steps");
-      const section = document.getElementById("timeline-section");
-      const bar = document.getElementById("progress-bar");
-      const totalSlides = steps.children.length;
-  
-      function updateTimeline() {
-        const rect = section.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-  
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          let progress = 1 - rect.top / windowHeight; 
-          progress = Math.min(Math.max(progress, 0), 1);
-  
-          if (window.innerWidth >= 768) {
-            const translateX = progress * (totalSlides - 1) * 40;
-            steps.style.transform = translateX(-${translateX}vw);
-            bar.style.width = ${progress * 100}%;
-          } else {
-            steps.style.transform = "translateY(0)";
-            bar.style.height = ${progress * 100}%;
-          }
-        }
-      }
-  
-      window.addEventListener("scroll", updateTimeline);
-      window.addEventListener("resize", updateTimeline);
-      updateTimeline();
-    </script>
-  
-   -->
-  
+       
     <section class="bg-[rgb(243,246,251)] h-fit w-full mt-[10vh] overflow-x-hidden flex flex-col gap-[5%] items-center justify-center min-h-screen" >
     <div class="w-[90%] flex justify-between items-center">
       <div class="h-fit w-[35%] flex flex-col gap-4 max-[1024px]:w-[50%] max-[500px]:w-[100%]">
@@ -1198,7 +1191,7 @@
           <div class="w-[95%]">
   
         <div class="flex mt-5 text-gray-500 justify-between max-[320px]:flex-col-reverse max-[320px]:gap-4">
-          <span>Copyright © 2025, Moniepoint</span>
+          <span>Copyright by ikechukwu victor © 2025, Moniepoint</span>
           <div class="flex w-[50%] justify-end gap-[5%] max-[320px]:w-[100%] max-[320px]:justify-between">
             <span>Privacy Policy</span>
             <span>Cookie Policy</span>
@@ -1215,360 +1208,6 @@
     </footer> 
  
   
-    <!-- <script>
-      const carousel1 = document.getElementById("carousel");
-      let slided2 = document.querySelectorAll(".slided");
-      const dotsContainer3 = document.getElementById("dots");
-      let totalSlided 4= slided.length;
-      let currentIndex5 = 0;
-  
-      // Create dots
-      for (let i = 0; i < totalSlided; i++) {
-        const dot = document.createElement("span");
-        dot.className = "dot w-3 h-3 rounded-full inactive cursor-pointer";
-        dot.addEventListener("click", () => goToSlided(i));
-        dotsContainer.appendChild(dot);
-      }
-      const dots = document.querySelectorAll(".dot");
-  
-      function getItemsPerView() {
-        if (window.innerWidth >= 1024) return 3;
-        if (window.innerWidth >= 768) return 2;
-        return 1;
-     }
-  
-      function updateCarousel() {
-        const itemsPerView = getItemsPerView();
-        const movePercent = -(100 / itemsPerView) * currentIndex;
-        carousel.style.transform = translateX(${movePercent}%);
-  
-        dots.forEach((dot, i) => {
-          dot.className = "dot w-3 h-3 rounded-full " + (i === currentIndex ? "active" : "inactive");
-        });
-     }
-  
-      function nextSlided() {
-        currentIndex = (currentIndex + 1) % totalSlided;
-        updateCarousel();
-     }
-  
-      function prevSlided() {
-        currentIndex = (currentIndex - 1 + totalSlided) % totalSlided;
-        updateCarousel();
-     }
-  
-      function goToSlided(index) {
-        currentIndex = index;
-        updateCarousel();
-     }
-  
-      window.addEventListener("resize", updateCarousel);
-      updateCarousel();
-    </script>
- 
- 
- 
-  
-     <script>
-      // Grab all sections and tabs automatically
-      const sections = document.querySelectorAll('[id^="section-"]');
-      const tabs = document.querySelectorAll('.tab');
-  
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Remove active state from all tabs
-            tabs.forEach(tab => tab.classList.remove('bg-blue-200', 'text-black'));
-            // Find tab linked to visible section
-            const activeTab = document.querySelector(.tab[href="#${entry.target.id}"]);
-            if (activeTab) {
-              activeTab.classList.add('bg-blue-200', 'text-black');
-            }
-          }
-        });
-      }, { threshold: 0.6 });
-  
-      // Observe each section
-      sections.forEach(section => observer.observe(section));
-    </script>
- 
- 
- 
- 
-  
-    <script>
-      // Elements
-      const slider11 = document.getElementById('slider');
-      const slides1 = Array.from(document.querySelectorAll('.slide'));
-      const nextButtons1 = Array.from(document.querySelectorAll('.next'));
-      const prevButtons1= Array.from(document.querySelectorAll('.prev'));
-      const thumbsAll1= Array.from(document.querySelectorAll('.thumb')); // all thumbs (in all slides)
-      const intervalTime1 = 3000;
-      let index1 = 0;
-      let autoSlide1;
-  
-      // Helper: reset all progress circles across all slides
-      function resetAllCircles() {
-        document.querySelectorAll('.progress-circle').forEach(c => {
-          c.style.transition = 'none';
-          c.style.strokeDashoffset = 100;
-        });
-     }
-  
-      // Animate the active thumbnail inside the visible slide
-      function animateActiveThumbnail() {
-        // reset everything first
-        resetAllCircles();
-  
-        // find the visible slide
-        const activeSlide = slides[index];
-        if (!activeSlide) return;
-  
-        // find the circle inside active slide that has data-index === index
-        const circle = activeSlide.querySelector(.progress-circle[data-index="${index}"]);
-        if (!circle) return;
-  
-        // start animation (small delay to allow reset)
-        setTimeout(() => {
-          circle.style.transition = stroke-dashoffset ${intervalTime}ms linear;
-          circle.style.strokeDashoffset = 0;
-        }, 50);
-     }
-  
-      // Move slider to index
-      function updateSlider() {
-        slider.style.transform = translateX(-${index * 100}%);
-        animateActiveThumbnail();
-     }
-  
-      function goTo(i) {
-        index = (i + slides.length) % slides.length;
-        updateSlider();
-        resetAutoSlide();
-     }
-  
-      function nextSlide() {
-        goTo(index + 1);
-     }
-  
-      function prevSlide() {
-        goTo(index - 1);
-     }
-  
-      function startAutoSlide() {
-        stopAutoSlide();
-        autoSlide = setInterval(() => goTo(index + 1), intervalTime);
-     }
-  
-      function stopAutoSlide() {
-        if (autoSlide) clearInterval(autoSlide);
-     }
-  
-      function resetAutoSlide() {
-        stopAutoSlide();
-        startAutoSlide();
-     }
-  
-      // attach prev/next listeners (there are buttons in every slide)
-      nextButtons.forEach(btn => btn.addEventListener('click', () => { nextSlide(); }));
-      prevButtons.forEach(btn => btn.addEventListener('click', () => { prevSlide(); }));
-  
-      // make all thumbs clickable — they carry data-index (0..3)
-      thumbsAll.forEach(thumb => {
-        thumb.addEventListener('click', (e) => {
-          const i = parseInt(thumb.dataset.index, 10);
-          if (!Number.isNaN(i)) goTo(i);
-        });
-      });
-  
-      // init
-      updateSlider();
-      startAutoSlide();
-  
-      // optional: pause on hover
-      slider.addEventListener('mouseenter', stopAutoSlide);
-      slider.addEventListener('mouseleave', startAutoSlide);
-    </script>
- 
- 
- 
-  
-      <script>
-      const carousel = document.getElementById("carousel");
-      let slided = document.querySelectorAll(".slided");
-      const dotsContainer = document.getElementById("dots");
-      let totalSlided = slided.length;
-      let currentIndex = 0;
-  
-      // Create dots
-      for (let i = 0; i < totalSlided; i++) {
-        const dot = document.createElement("span");
-        dot.className = "dot w-3 h-3 rounded-full inactive cursor-pointer";
-        dot.addEventListener("click", () => goToSlided(i));
-        dotsContainer.appendChild(dot);
-      }
-      const dots = document.querySelectorAll(".dot");
-  
-      function getItemsPerView() {
-        if (window.innerWidth >= 1024) return 3;
-        if (window.innerWidth >= 768) return 2;
-        return 1;
-     }
-  
-      function updateCarousel() {
-        const itemsPerView = getItemsPerView();
-        const movePercent = -(100 / itemsPerView) * currentIndex;
-        carousel.style.transform = translateX(${movePercent}%);
-  
-        dots.forEach((dot, i) => {
-          dot.className = "dot w-3 h-3 rounded-full " + (i === currentIndex ? "active" : "inactive");
-        });
-     }
-  
-      function nextSlided() {
-        currentIndex = (currentIndex + 1) % totalSlided;
-        updateCarousel();
-     }
-  
-      function prevSlided() {
-        currentIndex = (currentIndex - 1 + totalSlided) % totalSlided;
-        updateCarousel();
-     }
-  
-      function goToSlided(index) {
-        currentIndex = index;
-        updateCarousel();
-     }
-  
-      window.addEventListener("resize", updateCarousel);
-      updateCarousel();
-    </script>
- 
- 
- 
-  
-     <script>
-      // Grab all sections and tabs automatically
-      const sections = document.querySelectorAll('[id^="section-"]');
-      const tabs = document.querySelectorAll('.tab');
-  
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // Remove active state from all tabs
-            tabs.forEach(tab => tab.classList.remove('bg-blue-200', 'text-black'));
-            // Find tab linked to visible section
-            const activeTab = document.querySelector(.tab[href="#${entry.target.id}"]);
-            if (activeTab) {
-              activeTab.classList.add('bg-blue-200', 'text-black');
-            }
-          }
-        });
-      }, { threshold: 0.6 });
-  
-      // Observe each section
-      sections.forEach(section => observer.observe(section));
-    </script>
- 
- 
- 
- 
-  
-    <script>
-      // Elements
-      const slider = document.getElementById('slider');
-      const slides = Array.from(document.querySelectorAll('.slide'));
-      const nextButtons = Array.from(document.querySelectorAll('.next'));
-      const prevButtons = Array.from(document.querySelectorAll('.prev'));
-      const thumbsAll = Array.from(document.querySelectorAll('.thumb')); // all thumbs (in all slides)
-      const intervalTime = 3000;
-      let index = 0;
-      let autoSlide;
-  
-      // Helper: reset all progress circles across all slides
-      function resetAllCircles() {
-        document.querySelectorAll('.progress-circle').forEach(c => {
-          c.style.transition = 'none';
-          c.style.strokeDashoffset = 100;
-        });
-     }
-  
-      // Animate the active thumbnail inside the visible slide
-      function animateActiveThumbnail() {
-        // reset everything first
-        resetAllCircles();
-  
-        // find the visible slide
-        const activeSlide = slides[index];
-        if (!activeSlide) return;
-  
-        // find the circle inside active slide that has data-index === index
-        const circle = activeSlide.querySelector(.progress-circle[data-index="${index}"]);
-        if (!circle) return;
-  
-        // start animation (small delay to allow reset)
-        setTimeout(() => {
-          circle.style.transition = stroke-dashoffset ${intervalTime}ms linear;
-          circle.style.strokeDashoffset = 0;
-        }, 50);
-     }
-  
-      // Move slider to index
-      function updateSlider() {
-        slider.style.transform = translateX(-${index * 100}%);
-        animateActiveThumbnail();
-     }
-  
-      function goTo(i) {
-        index = (i + slides.length) % slides.length;
-        updateSlider();
-        resetAutoSlide();
-     }
-  
-      function nextSlide() {
-        goTo(index + 1);
-     }
-  
-      function prevSlide() {
-        goTo(index - 1);
-     }
-  
-      function startAutoSlide() {
-        stopAutoSlide();
-        autoSlide = setInterval(() => goTo(index + 1), intervalTime);
-     }
-  
-      function stopAutoSlide() {
-        if (autoSlide) clearInterval(autoSlide);
-     }
-  
-      function resetAutoSlide() {
-        stopAutoSlide();
-        startAutoSlide();
-     }
-  
-      // attach prev/next listeners (there are buttons in every slide)
-      nextButtons.forEach(btn => btn.addEventListener('click', () => { nextSlide(); }));
-      prevButtons.forEach(btn => btn.addEventListener('click', () => { prevSlide(); }));
-  
-      // make all thumbs clickable — they carry data-index (0..3)
-      thumbsAll.forEach(thumb => {
-        thumb.addEventListener('click', (e) => {
-          const i = parseInt(thumb.dataset.index, 10);
-          if (!Number.isNaN(i)) goTo(i);
-        });
-      });
-  
-      // init
-      updateSlider();
-      startAutoSlide();
-  
-      // optional: pause on hover
-      slider.addEventListener('mouseenter', stopAutoSlide);
-      slider.addEventListener('mouseleave', startAutoSlide);
-    </script>
-   -->
-      
  
  
   
