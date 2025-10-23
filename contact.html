@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>contact page</title>
+      <link href="src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
+  <body  class="relative h-full w-full ">
+  <!-- Top Cookie Bar -->
+    <div class="fixed top-0 z-40 bg-[#fff0c2]  h-[9vh] w-full flex flex-wrap justify-center items-center gap-10 px-6 text-center text-sm sm:text-base ">
+      <p class="text-black">
+        This website uses cookies to enhance your experience. Learn more here:
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="hover:underline text-blue-700">Privacy Policy</a>
+        <a href="#" class="hover:underline text-blue-700">Cookie Policy</a>
+      </div>
+    </div>
+    <!-- Cookie Banner -->
+    <div class="fixed bottom-0 z-30 bg-[#fff0c2] h-[9vh] w-full flex flex-wrap justify-center items-center gap-2 px-6  max-[500px]:mt-0  max-[1024px]:fixed max-[1024px]:mt-[9vh] max-[1024px]:block max-[1024px]:z-30 min-[1024px]:hidden">
+      <p class="text-black text-sm md:text-base text-center">
+        This website uses cookies to enhance your experience. Learn more here:
+      </p>
+      <div class="flex gap-4 text-sm md:text-base">
+        <span class="text-blue-800 hover:underline cursor-pointer">Privacy Policy</span>
+        <span class="text-blue-800 hover:underline cursor-pointer">Cookie Policy</span>
+      </div>
+    </div>
+    
+    <!-- Business/Personal Toggle (Mobile Only) -->
+    <div class="busi-per z-30 w-full flex md:hidden fixed top-[9vh]">
+      <div class="w-1/2 h-[9vh] bg-[rgb(9,34,86)] flex justify-center items-center">
+        <span class="text-white">Business</span>
+      </div>
+      <div class="w-1/2 h-[9vh] bg-[rgb(3,19,53)] flex justify-center items-center">
+        <span class="text-gray-400">Personal</span>
+      </div>
+    </div>
+    <!-- Header -->
+    <header class="fixed top-[9vh] w-full bg-white z-30 h-[11vh] flex justify-between items-center px-4 md:px-10 shadow-sm ">
+      <!-- Logo + Left Section -->
+      <div class="flex items-center space-x-3">
+        <img src="image/image.png" alt="Moniepoint Logo" class="h-8 md:h-10" />
+        <div class="hidden md:flex gap-2">
+          <button id="Business" class="hover:bg-[#edf8fe] py-1 px-3 rounded-2xl text-sm md:text-base">Business</button>
+          <button id="personal" class="hover:bg-[#edf8fe] py-1 px-3 rounded-2xl text-sm md:text-base">Personal</button>
+        </div>
+      </div>
+    
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-6">
+        <div class="relative group">
+          <a href="#" class="text-black text-base flex items-center gap-1">Products <i class="bi bi-chevron-down"></i></a>
+          <div class="absolute hidden group-hover:flex top-full left-0 mt-3 bg-white rounded-xl border shadow-md w-[850px] p-5 z-40 justify-between">
+            <!-- Column 1 -->
+            <div class="w-[45%] flex flex-col gap-2">
+              <div class="hover:bg-blue-100 rounded-lg p-2">
+                <h2 class="text-xl font-semibold text-blue-950">Banking</h2>
+                <p class="text-gray-600 text-sm">Business and personal banking accounts</p>
+              </div>
+              <div class="hover:bg-blue-100 rounded-lg p-2">
+                <h2 class="text-xl font-semibold text-blue-950">Credit</h2>
+                <p class="text-gray-600 text-sm">Business and individual loans</p>
+              </div>
+              <div class="hover:bg-blue-100 rounded-lg p-2">
+                <h2 class="text-xl font-semibold text-blue-950">Payments</h2>
+                <p class="text-gray-600 text-sm">Accept payments from anywhere</p>
+              </div>
+              <div class="hover:bg-blue-100 rounded-lg p-2">
+                <h2 class="text-xl font-semibold text-blue-950">Business Management</h2>
+                <p class="text-gray-600 text-sm">Easy business money management & report</p>
+              </div>
+            </div>
+            <!-- Column 2 -->
+            <div class="w-[45%] flex flex-col gap-4">
+              <div class="flex items-start gap-3">
+                <div class="bg-blue-300 h-8 w-8 flex justify-center items-center rounded-lg">
+                  <i class="bi bi-grid-3x3-gap"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-blue-950">Banking Account</h3>
+                  <p class="text-gray-600 text-sm">Get a free bank account to power your business</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="bg-blue-300 h-8 w-8 flex justify-center items-center rounded-lg">#</div>
+                <div>
+                  <h3 class="font-semibold text-blue-950">USSD</h3>
+                  <p class="text-gray-600 text-sm">Dial *5573# for easy offline banking</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Company Dropdown -->
+        <div class="relative group">
+          <a href="#" class="text-black text-base flex items-center gap-1">Company <i class="bi bi-chevron-down"></i></a>
+          <div class="absolute hidden group-hover:flex top-full left-0 mt-3 bg-white rounded-xl border shadow-md w-60 flex-col p-4 z-40">
+            <div class="flex items-center gap-2 hover:bg-blue-100 rounded-lg p-2">
+              <div class="bg-blue-300 h-8 w-8 flex justify-center items-center rounded-lg"><i class="bi bi-option"></i></div>
+              <p class="text-blue-950 font-semibold">Culture</p>
+            </div>
+            <div class="flex items-center gap-2 hover:bg-blue-100 rounded-lg p-2">
+              <div class="bg-blue-300 h-8 w-8 flex justify-center items-center rounded-lg"><i class="bi bi-suitcase-lg"></i></div>
+              <p class="text-blue-950 font-semibold">Careers</p>
+            </div>
+            <div class="flex items-center gap-2 hover:bg-blue-100 rounded-lg p-2">
+              <div class="bg-blue-300 h-8 w-8 flex justify-center items-center rounded-lg"><i class="bi bi-folder2-open"></i></div>
+              <p class="text-blue-950 font-semibold">Press</p>
+            </div>
+          </div>
+        </div>
+    
+        <a href="about.html" class="hover:bg-[#c4e9fd] py-1 px-3 rounded-lg text-black">About</a>
+        <a href="#" class="hover:bg-[#c4e9fd] py-1 px-3 rounded-lg text-black">Contact</a>
+        <a href="#" class="hover:bg-[#c4e9fd] py-1 px-3 rounded-lg text-black">Blog</a>
+    
+        <div class="flex items-center gap-3">
+          <a href="#" class="bg-[#c4e9fd] py-1 px-3 rounded-lg flex items-center gap-1">
+            Sign In <i class="bi bi-arrow-right-short"></i>
+          </a>
+          <div class="flex items-center gap-1">
+            <img src="image/nig (1).svg" class="h-6 w-6" alt="">
+            <i class="bi bi-chevron-down"></i>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="lg:hidden border border-blue-700 rounded-2xl p-2 text-2xl text-blue-600">
+        <i class="bi bi-list"></i>
+      </button>
+    </header>
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-50 hidden flex-col p-6 overflow-y-auto">
+      <div class="flex justify-between items-center mb-6">
+        <img src="image/image.png" alt="Moniepoint Logo" class="h-8" />
+        <button id="close-menu" class="text-3xl"><i class="bi bi-x"></i></button>
+      </div>
+    
+      <div class="flex flex-col gap-5 text-lg text-black">
+        <div>
+          <button class="flex items-center justify-between w-full font-semibold" onclick="toggleDropdown('mobile-products')">
+            Products <i class="bi bi-chevron-down"></i>
+          </button>
+          <div id="mobile-products" class="hidden1 mt-3 ml-3 flex flex-col gap-3">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full border text-sm">Banking</span>
+              <span class="px-3 py-1 rounded-full border text-sm">Credit</span>
+              <span class="px-3 py-1 rounded-full border text-sm">Payments</span>
+              <span class="px-3 py-1 rounded-full border text-sm">Business Management</span>
+            </div>
+            <div class="mt-3 flex flex-col gap-2">
+              <div>
+                <h4 class="font-semibold">Banking Account</h4>
+                <p class="text-gray-600 text-sm">Get a free bank account to power your business</p>
+              </div>
+              <div>
+                <h4 class="font-semibold">USSD</h4>
+                <p class="text-gray-600 text-sm">Dial *5573# for easy offline banking</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div>
+          <button class="flex items-center justify-between w-full font-semibold" onclick="toggleDropdown('mobile-company')">
+            Company <i class="bi bi-chevron-down"></i>
+          </button>
+          <div id="mobile-company" class="hidden mt-3 ml-3 flex flex-col gap-2">
+            <div class="flex items-center gap-2"><i class="bi bi-option text-blue-500"></i> Culture</div>
+            <div class="flex items-center gap-2"><i class="bi bi-suitcase-lg text-blue-500"></i> Careers</div>
+            <div class="flex items-center gap-2"><i class="bi bi-folder2-open text-blue-500"></i> Press</div>
+          </div>
+        </div>
+    
+        <a href="about.html" class="font-semibold">About</a>
+        <a href="#" class="font-semibold">Contact</a>
+        <a href="Blog.html" class="font-semibold">Blog</a>
+      </div>
+    
+      <button class="mt-10 w-full bg-blue-600 text-white py-3 rounded-full flex justify-center items-center gap-2 font-semibold hover:bg-blue-700">
+        Sign in <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+    <!-- Hero Section -->
+    <section class="w-full min-h-[30vh] sm:min-h-[70vh] mt-[10vh] sm:mt-[15vh] flex flex-col justify-center items-center gap-6 bg-[#f5f9fd] text-center rounded-b-[60px] sm:rounded-b-[100px] px-4 sm:px-8">
+      
+      <!-- Button -->
+      <button class="bg-[#fff0c2] text-black rounded-full px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-semibold hover:scale-95 transition-transform duration-300 shadow-sm">
+        Contact us
+      </button>
+      
+      <!-- Heading -->
+      <h1 class="text-2xl sm:text-4xl md:text-6xl font-bold text-[#031335] leading-snug sm:leading-tight">
+        We’re always available to <br class="hidden sm:block"> answer your questions
+      </h1>
+    
+    </section>
+
+
+    
+    <!-- First Section -->
+    <div class="min-h-[10vh] w-full bg-[#f5f9fd] flex flex-col gap-20 px-4 sm:px-6 md:px-10 py-10">
+    <div class="w-full flex flex-col md:flex-row items-center justify-center gap-20 md:gap-20">
+      
+      <!-- Engage Support -->
+      <div class="w-full md:w-[40%] bg-white text-black rounded-3xl flex flex-col justify-start items-center gap-10 p-6 sm:p-8 -mt-10 md:-mt-40 ">
+        <div class="w-[90%] flex flex-col gap-6 sm:gap-10 p-4 sm:p-6 rounded-2xl">
+          <div class="w-[40%] sm:w-[30%] md:w-[20%] flex items-center justify-center  mx-auto">
+            <img src="image/engage.svg" alt="">
+          </div>
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#031335] text-center">Engage Support</h1>
+          <p class="text-base sm:text-lg text-center">Experiencing problems? Talk to us about it and we will get right on it.</p>
+          <span class="text-blue-600 text-center cursor-pointer hover:underline">
+            Chat with us <i class="bi bi-arrow-right-short"></i>
+          </span>
+        </div>
+      </div>
+  
+      <!-- Find Answers -->
+      <div class="w-full md:w-[40%] bg-white text-black rounded-3xl flex flex-col justify-start items-center gap-10 p-6 sm:p-8 -mt-10 md:-mt-40">
+        <div class="w-[90%] flex flex-col gap-6 sm:gap-10 p-4 sm:p-6 rounded-2xl">
+          <div class="w-[40%] sm:w-[30%] md:w-[20%] flex items-center justify-center  mx-auto">
+            <img src="image/find.svg" alt="">
+          </div>
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#031335] text-center">Find Answers</h1>
+          <p class="text-base sm:text-lg text-center">Experiencing problems? Talk to us about it and we will get right on it.</p>
+          <span class="text-blue-600 text-center cursor-pointer hover:underline">
+            Visit help centre <i class="bi bi-arrow-right-short"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Second Section -->
+    <div class="w-full flex justify-center mt-10 md:mt-0 max-sm:h-fit">
+      <section class="w-full md:w-[90%] flex flex-col gap-10 md:gap-6  p-4 sm:p-8">
+        <!-- Header -->
+        <div class="w-full md:w-[40%] flex items-center  mx-auto text-center md:text-left">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#031335] leading-snug text-left">
+            Get quick support on <br class="hidden sm:block"> popular issues
+          </h1>
+        </div>
+    
+        <!-- Cards Row -->
+        <div class="w-full flex flex-row lg:flex-row gap-8 md:gap-7 items-center  overflow-x-auto lg:overflow-x-visible scrollbar-hide snap-x snap-mandatory px-2">
+          
+          <!-- Card 1 -->
+          <div class=" bg-white rounded-3xl min-w-[85%] sm:min-w-[70%] md:min-w-[45%] lg:min-w-0 lg:w-[30%] flex items-center justify-center p-6 sm:p-8 snap-start">
+            <div class="w-full flex flex-col gap-5 p-4 rounded-xl">
+              <h1 class="text-2xl md:text-3xl font-bold text-[#031335]">Trouble signing in?</h1>
+              <p class="text-base sm:text-lg">If you’ve got trouble signing in, you might need to reset your password or recover your username. Click learn more for a step-by-step guide on how to manage your account.</p>
+              <div class="flex flex-wrap gap-2 p-2 rounded-xl">
+                <span class="bg-[#c4e9fd] py-1 px-3 rounded-lg text-blue-600 text-sm">Account</span>
+                <span class="bg-[#c4e9fd] py-1 px-3 rounded-lg text-blue-600 text-sm">Sign</span>
+                <span class="bg-[#c4e9fd] py-1 px-3 rounded-lg text-blue-600 text-sm">Dashboard</span>
+              </div>
+              <span class="text-blue-600 cursor-pointer hover:underline">
+                Learn more <i class="bi bi-arrow-right-short"></i>
+              </span>
+            </div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class=" bg-white rounded-3xl min-w-[85%] sm:min-w-[70%] md:min-w-[45%] lg:min-w-0 lg:w-[30%] flex items-center justify-center p-6 sm:p-8 snap-start">
+            <div class="w-full flex flex-col gap-5 p-4 rounded-xl">
+              <h1 class="text-2xl md:text-3xl font-bold text-[#031335]">Need help with KYC?</h1>
+              <p class="text-base sm:text-lg">Having trouble with the KYC verification process? Click below to learn about the different KYC levels, and the step-by-step requirements for each.</p>
+              <div class="flex flex-wrap gap-2  p-2 rounded-xl">
+                <span class="bg-[#c4e9fd] py-1 px-3 rounded-lg text-blue-600 text-sm">verification</span>
+                <span class="bg-[#c4e9fd] py-1 px-3 rounded-lg text-blue-600 text-sm">transactions</span>
+                <span class="bg-[#c4e9fd] py-1 px-3 rounded-lg text-blue-600 text-sm">security</span>
+              </div>
+              <span class="text-blue-600 cursor-pointer hover:underline">
+                Learn more <i class="bi bi-arrow-right-short"></i>
+              </span>
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class=" bg-white rounded-3xl min-w-[85%] sm:min-w-[70%] md:min-w-[45%] lg:min-w-0 lg:w-[30%] flex items-center justify-center p-6 sm:p-8 snap-start">
+            <div class="w-full flex flex-col gap-5 p-4 rounded-xl">
+              <h1 class="text-2xl md:text-3xl font-bold text-[#031335]">Compromised account?</h1>
+              <p class="text-base sm:text-lg">For any issues, including fraud, click the link below to submit a request, and our support team will respond to you as soon as possible.</p>
+              <div class="flex flex-wrap gap-2  p-2 rounded-xl">
+                <span class="bg-[#c4e9fd] py-1 px-3 rounded-lg text-blue-600 text-sm">fraud</span>
+                <span class="bg-[#c4e9fd] py-1 px-3 rounded-lg text-blue-600 text-sm">security</span>
+                <span class="bg-[#c4e9fd] py-1 px-3 rounded-lg text-blue-600 text-sm">account</span>
+              </div>
+              <span class="text-blue-600 cursor-pointer hover:underline">
+                Learn more <i class="bi bi-arrow-right-short"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Button -->
+        <div class="w-full flex justify-center mt-6">
+          <div class="bg-[#0357ee] rounded-full">
+            <button class="text-white rounded-full px-8 py-3 text-lg font-bold hover:scale-95 transition-transform duration-300">
+              Go to moniepoint support
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+      
+    
+    <!-- Pictures Section -->
+    <div class="w-full min-h-[90vh] flex items-center justify-center bg-white px-4 sm:px-6 py-10">
+        <div class="w-[90%] bg-[#ffffff] flex flex-col lg:flex-row gap-10 items-center justify-center">
+        <!-- Left Card (Existing Owner) -->
+        <div class="w-full lg:w-1/2  rounded-3xl bg-[#ffffff] flex items-center justify-center p-4">
+          <div class="w-full flex flex-col gap-6 sm:gap-9 items-center text-center">
+            <div class="w-full">
+              <img src="image/owner.png" alt="" class="w-full">
+            </div>
+            <h1 class="text-2xl md:text-3xl font-bold text-[#031335]">
+              Already a Moniepoint business owner but need some<br class="hidden sm:block"> assistance?
+            </h1>
+            <button class="bg-[#c4e9fd] text-black rounded-full px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-semibold hover:scale-95 transition-transform duration-300 shadow-sm">
+              Sign in <i class="bi bi-arrow-right-short"></i>
+            </button>
+          </div>
+        </div>
+    
+        <!-- Right Card (New Customer) -->
+        <div class="w-full lg:w-1/2 rounded-3xl bg-[#ffffff] flex items-center justify-center p-4">
+          <div class="w-full flex flex-col gap-6 sm:gap-9 items-center text-center">
+            <div class="w-full">
+              <img src="image/new.png" alt="" class="w-full">
+            </div>
+            <h1 class="text-2xl md:text-3xl font-bold text-[#031335]">
+              New to Moniepoint and need assistance with using our<br class="hidden sm:block"> products for your business?
+            </h1>
+            <button class="bg-[#c4e9fd] text-black rounded-full px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg font-semibold hover:scale-95 transition-transform duration-300 shadow-sm">
+              Speak with us <i class="bi bi-arrow-right-short"></i>
+            </button>
+          </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- CTA Section -->
+    <section class="w-full min-h-[60vh] mt-10 flex flex-col items-center justify-center gap-6 text-center px-6 bg-[#0346c0] bg-cover bg-no-repeat">
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug">
+        We’re powering the dreams of millions of <br class="hidden sm:block"> businesses.
+      </h1>
+      <p class="text-white text-base sm:text-lg">Let’s power yours too.</p>
+      <button class="text-black rounded-3xl px-8 py-3 text-lg font-semibold hover:scale-95 transition-transform duration-300 bg-[#fff0c2] mt-3">
+        Create Account <i class="bi bi-arrow-right-short"></i>
+      </button>
+    </section>
+
+
+
+    <!-- footer -->
+    <footer  class="w-full h-fit flex flex-col justify-center items-center bg-[rgb(3,19,53)] pt-[15vh]">
+      <!-- top -->
+      <div class="w-[95%] h-fit flex justify-between mt-[12vh] max-[1024px]:flex-col ">
+        <div class="w-[40%] h-fit flex flex-col gap-4 max-[1024px]:w-[100%]">
+          <span><img src="image.n/logo-mfb-white.png" class="h-8" alt=""></span>
+          <p class=" text-gray-400 mt-4 font-medium text-[15px]">Moniepoint Microfinance Bank Limited is authorised and regulated by the Central Bank of Nigeria to offer banking services. Deposits are insured by the Nigerian Deposit Insurance Corporation (NDIC).</p>
+        
+        <div class="w-full flex gap-5 mt-4">
+              <div class="flex items-center gap-2 bg-[rgb(3,11,29)] py-2.5 px-3 rounded-2xl" >
+              <span><img src="image.n/apple.svg" alt=""></span>
+              <div class="text-white">
+                <p>Get it on</p>
+                <p class="text-[18px]">App Store</p>
+              </div>
+              </div>
+          
+    
+            <div class="flex items-center gap-2 bg-[rgb(3,11,29)] py-2.5 px-3 rounded-2xl">
+              <span><img src="image.n/playstore.svg" alt=""></span>
+              <div class="text-white">
+                <p>Get it on</p>
+                <p class="text-[18px]">Google Play</p>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      
+
+        <div class="flex w-[60%] justify-center text-[15px] font-medium gap-7 flex-wrap max-[1024px]:w-[100%]  max-[1024px]:mt-[6vh]">
+          <div class="flex flex-col gap-2.5 w-fit h-fit text-gray-500 max-[1024px]:w-[45vw] max-[500px]:w-[90vw]">
+            <h1 class="text-white "> For Business</h1>
+            <h2>Business Account</h2>
+            <h2>Point of Sale Terminal</h2>
+            <h2>Loan</h2>
+            <h2>Expense Card</h2>
+          </div>
+
+          <div class="flex flex-col gap-2.5 w-fit h-fit text-gray-500 max-[1024px]:w-[45vw] max-[500px]:w-[90vw]">
+            <h1 class="text-white "> For Personal</h1>
+            <h2>Instant Debit Card</h2>
+            <h2>Personal Account</h2>
+            <h2>Payment</h2>
+            <h2>Personal Banking</h2>
+          </div>
+
+          <div class="flex flex-col gap-2.5 w-fit h-fit text-gray-500 max-[1024px]:w-[45vw] max-[500px]:w-[90vw]">
+            <h1 class="text-white "> Company</h1>
+            <h2>About Us</h2>
+            <h2>Culture</h2>
+            <h2>Join Our Team</h2>
+            <h2>Press & Media</h2>
+            <h2>Contact Us</h2>
+          </div>
+
+          <div class="flex flex-col w-fit h-fit gap-2.5 text-gray-500 max-[1024px]:w-[45vw] max-[500px]:w-[90vw]">
+            <h1 class="text-white ">Resources</h1>
+            <h2>Moniepoint Blog</h2>
+            <h2>Help Centre</h2>
+            <h2>Whistleblower Policy</h2>
+            <h2>IMS Policy</h2>
+            <h2>Report a Vulnerability</h2>
+            <h2>Informal Economy <br> Report</h2>
+            <h2>Security Trust Center</h2>
+          </div>
+        </div>
+      
+      </div>
+
+      <!-- middle -->
+      <div class="w-[95%] mt-[10vh] h-fit text-[15px] font-medium flex justify-between items-center border-b-2 border-gray-400 pb-[5vh]">
+          <d  iv class=" w-[60%] flex justify-between max-[768px]:flex-col max-[768px]:gap-5 max-[768px]:w-[100%]">
+          <div class="text-gray-400 flex flex-col">
+              <div class="max-[768px]:flex max-[768px]:gap-1 max-[768px]:w-[100%]">
+                <h1>Plot 7A, Block 4,</h1>
+            <h1>Admirality Road,</h1>
+            <h1>Lekki Phase 1, Lagos State.</h1>
+              </div>
+            <div class="mt-5">
+              <h1>support@moniepoint.com</h1>
+            <h1>+234 201 888 9990</h1>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h1 class="text-white font-medium">Connect with us</h1>
+            <div class=" w-full flex gap-2">
+              <span class="text-gray-500 w-fit rounded-2xl border-[1px] px-2 py-1  ">in</span>              
+              <span class="text-gray-500 w-fit rounded-2xl border-[1px] px-2 py-1 "><i class="bi bi-twitter"></i></span>
+              <span class="text-gray-500 w-fit rounded-2xl border-[1px] px-2 py-1  "><i class="bi bi-facebook"></i></span>
+              <span class="text-gray-500 w-fit rounded-2xl border-[1px] px-2 py-1 "><i class="bi bi-instagram"></i></span>
+              <span class="text-gray-500 w-fit rounded-2xl border-[1px] px-2 py-1  "><i class="bi bi-youtube"></i></span>
+            </div>
+          </div>
+    </div>
+
+
+
+        <div class="w-fit flex gap-1.5 font-medium text-white items-center mr-[5%]">
+          <img src="image/nig (1).svg" class="h-5 w-5" alt=""> Nigeria <i class="bi bi-chevron-down"></i>
+        </div>
+      </div>
+        <!-- finallll  -->
+          <div class="w-[95%]">
+
+        <div class="flex mt-5 text-gray-500 justify-between max-[320px]:flex-col-reverse max-[320px]:gap-4">
+          <span>Copyright by ikechukwu victor © 2025, Moniepoint</span>
+          <div class="flex w-[50%] justify-end gap-[5%] max-[320px]:w-[100%] max-[320px]:justify-between">
+            <span>Privacy Policy</span>
+            <span>Cookie Policy</span>
+          </div>
+        </div>
+
+          <div class=" text-gray-500 my-[10vh] w-[100%]">
+        © 2025. Moniepoint is a bank with its services provided by Moniepoint MFB Limited and duly licensed by the Central Bank of Nigeria. Unauthorised reproduction or redistribution of copyrighted materials on this website and Moniepoint's digital media pages is strictly prohibited. By clicking on some of the links above, you will leave Moniepoint's website and be directed to a third-party website. The privacy practices of those third parties may differ from those of Moniepoint. We recommend you review the privacy statements of those third-party websites, as Moniepoint is not responsible for those third parties' privacy or security practices. Additional disclosures can be found in the resources section of our website.
+          </div>
+        </div>
+
+          </div>
+      
+    </footer> 
+
+
+    
+
+    
+
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- JS -->
+    <script>
+      const menuBtn = document.getElementById('menu-toggle');
+      const closeBtn = document.getElementById('close-menu');
+      const mobileMenu = document.getElementById('mobile-menu');
+    
+      menuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+      closeBtn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    
+      function toggleDropdown(id) {
+        const dropdown = document.getElementById(id);
+        dropdown.classList.toggle('hidden');
+      }
+    </script>
+    
+      
+  </body>
+</html>
